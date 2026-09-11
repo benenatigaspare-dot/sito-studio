@@ -258,6 +258,39 @@
     to{opacity:1; transform:translateY(0);}
   }
 
+  /* ---------- Trust bar ---------- */
+  .trust-bar{
+    background:var(--paper-2);
+    border-bottom:1px solid var(--line);
+  }
+  .trust-bar-inner{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px 28px;
+    padding:16px 32px;
+    justify-content:center;
+    font-size:0.86rem;
+    color:#4a453a;
+  }
+  @media(min-width:800px){
+    .trust-bar-inner{justify-content:flex-start;}
+  }
+  .trust-bar-inner span{
+    position:relative;
+    padding-left:16px;
+  }
+  .trust-bar-inner span::before{
+    content:"";
+    position:absolute;
+    left:0; top:50%;
+    transform:translateY(-50%);
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--brass);
+  }
+  .trust-bar-inner span:first-child{padding-left:0;}
+  .trust-bar-inner span:first-child::before{display:none;}
+
   /* ---------- Section shell ---------- */
   section{padding:76px 0;}
   .section-ink{background:var(--ink); color:var(--on-ink);}
@@ -444,14 +477,35 @@
 
   /* ---------- Footer ---------- */
   footer{
-    padding:32px 0;
+    padding:28px 0;
     border-top:1px solid var(--line);
     font-size:0.86rem;
     color:#6b6555;
+  }
+  .footer-row{
     display:flex;
     flex-wrap:wrap;
     gap:8px 24px;
     justify-content:space-between;
+    align-items:baseline;
+  }
+  .footer-row-legal{
+    margin-top:14px;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+    font-size:0.8rem;
+  }
+  .privacy-details summary{
+    cursor:pointer;
+    color:#4a453a;
+    text-decoration:underline;
+    list-style:none;
+  }
+  .privacy-details summary::-webkit-details-marker{display:none;}
+  .privacy-details p{
+    margin-top:10px;
+    max-width:62ch;
+    line-height:1.55;
   }
 
   /* ---------- Mobile call bar ---------- */
@@ -507,7 +561,7 @@
     <div class="wrap">
       <div class="hero-text">
         <div class="kicker">Avv. Gaspare Benenati · Foro di Trapani</div>
-        <h1>Difesa penale, dal primo giorno alla sentenza.</h1>
+        <h1>Studio Legale Benenati — Difesa penale.</h1>
         <p class="lede">Assistenza legale in ogni fase del procedimento penale — dalle indagini preliminari al dibattimento, fino alle impugnazioni. Con sede ad Alcamo, disponibile a seguire i propri assistiti anche presso altri Tribunali, in Italia.</p>
         <div class="cta-row">
           <a class="btn-primary" href="tel:+393286033555">Chiama lo studio</a>
@@ -520,11 +574,20 @@
     </div>
   </section>
 
+  <div class="trust-bar">
+    <div class="wrap trust-bar-inner">
+      <span>Foro di Trapani</span>
+      <span>Solo diritto penale</span>
+      <span>Sede ad Alcamo</span>
+      <span>Disponibile in tutta Italia</span>
+    </div>
+  </div>
+
   <section id="chi-sono">
     <div class="wrap">
       <div class="section-head">
         <div class="label">Chi sono</div>
-        <h2>Un riferimento locale per la difesa penale.</h2>
+        <h2>Un punto fermo nella difesa penale.</h2>
       </div>
       <div class="bio">
         <div class="bio-aside">
@@ -647,7 +710,7 @@
           </dl>
         </div>
         <div class="contact-note">
-          <p>Per una prima valutazione della propria posizione, è preferibile un contatto telefonico diretto: consente di individuare rapidamente l'urgenza della situazione e i passi da compiere.</p>
+          <p>Una telefonata diretta resta il modo più rapido per inquadrare la situazione: permette di stabilire subito l'urgenza del caso e i passi da compiere.</p>
         </div>
       </div>
     </div>
@@ -656,15 +719,28 @@
 </main>
 
 <footer>
-  <div class="wrap" style="display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between; width:100%;">
-    <span>Studio Legale Benenati — Avv. Gaspare Benenati</span>
-    <span>Via Manzoni 7, Alcamo (TP) · Foro di Trapani</span>
+  <div class="wrap footer-inner">
+    <div class="footer-row">
+      <span>Studio Legale Benenati — Avv. Gaspare Benenati</span>
+      <span>Via Manzoni 7, Alcamo (TP) · Foro di Trapani</span>
+    </div>
+    <div class="footer-row footer-row-legal">
+      <span>© <span id="year"></span> Studio Legale Benenati. Tutti i diritti riservati.</span>
+      <details class="privacy-details">
+        <summary>Informativa privacy</summary>
+        <p>Titolare del trattamento: Gaspare Benenati, Via Manzoni 7, Alcamo (TP) — studiolegalebenenati@gmail.com. Questo sito non utilizza cookie di profilazione né strumenti di analisi statistica. I dati comunicati tramite telefono o email vengono trattati esclusivamente per rispondere alla richiesta ricevuta, ai sensi del Regolamento UE 2016/679 (GDPR). In qualsiasi momento è possibile richiedere accesso, rettifica o cancellazione dei propri dati scrivendo all'indirizzo email sopra indicato.</p>
+      </details>
+    </div>
   </div>
 </footer>
 
 <div class="mobile-call-bar">
   <a href="tel:+393286033555">Chiama ora — 328 603 3555</a>
 </div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
