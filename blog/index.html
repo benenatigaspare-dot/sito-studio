@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Studio Legale Benenati | Diritto penale spiegato con chiarezza</title>
+<meta name="description" content="Articoli dello Studio Legale Benenati su diritto penale e processo penale: termini, diritti e istituti spiegati in modo chiaro, ad Alcamo e in tutta Italia.">
+<meta name="theme-color" content="#1b2130">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,500;0,8..30,600;1,8..30,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#1b2130;
+    --paper:#ffffff;
+    --paper-2:#f3f1ec;
+    --text:#211e19;
+    --on-ink:#eeeae1;
+    --on-ink-dim:#a9aebb;
+    --brass:#8a6a3f;
+    --line:#c9c0ad;
+    --line-on-ink:#3a4053;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  :focus-visible{
+    outline:2px solid var(--brass);
+    outline-offset:2px;
+  }
+
+  body{
+    background:var(--paper);
+    color:var(--text);
+    font-family:"Public Sans", sans-serif;
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,.serif{
+    font-family:"Piazzolla", serif;
+    font-weight:500;
+    letter-spacing:-0.01em;
+  }
+
+  a{color:inherit;}
+
+  .wrap{
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:20;
+    background:var(--ink);
+    border-bottom:1px solid var(--line-on-ink);
+  }
+  header .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:14px; padding-bottom:14px;
+  }
+  .brand-text{
+    font-family:"Piazzolla", serif;
+    font-size:1.05rem;
+    color:var(--on-ink);
+    font-weight:500;
+    text-decoration:none;
+  }
+  header nav a{
+    text-decoration:none;
+    font-size:0.95rem;
+    color:var(--on-ink-dim);
+    margin-left:28px;
+  }
+  header nav a:hover{color:var(--on-ink);}
+  header nav a.current{color:var(--on-ink);}
+  .header-call{ display:none; }
+  @media(min-width:640px){
+    .header-call{
+      display:inline-block;
+      margin-left:28px;
+      padding:8px 16px;
+      border:1px solid var(--brass);
+      border-radius:2px;
+      text-decoration:none;
+      font-size:0.92rem;
+      color:var(--on-ink) !important;
+    }
+    .header-call:hover{background:var(--brass); color:var(--ink) !important;}
+  }
+
+  /* ---------- Page intro ---------- */
+  .intro{
+    background:var(--ink);
+    color:var(--on-ink);
+    padding:72px 0 56px;
+  }
+  .intro .kicker{
+    font-size:0.92rem;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#c9a877;
+    margin-bottom:18px;
+  }
+  .intro h1{
+    font-size:clamp(2.1rem, 4.4vw, 3rem);
+    line-height:1.12;
+    max-width:18ch;
+    color:var(--on-ink);
+  }
+  .intro p{
+    margin-top:20px;
+    max-width:56ch;
+    font-size:1.08rem;
+    color:var(--on-ink-dim);
+  }
+
+  /* ---------- Article list ---------- */
+  .articles{
+    background:var(--paper-2);
+    padding:56px 0 76px;
+  }
+  .article-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .article-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:32px;
+    display:block;
+    text-decoration:none;
+    color:inherit;
+    transition:border-color .15s ease;
+  }
+  .article-card:hover{ border-color:var(--brass); }
+  .article-meta{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    margin-bottom:14px;
+    font-size:0.82rem;
+  }
+  .article-category{
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    font-weight:600;
+    color:var(--brass);
+  }
+  .article-date{ color:#6b6555; }
+  .article-card h2{
+    font-size:1.4rem;
+    line-height:1.25;
+    margin-bottom:10px;
+  }
+  .article-card p{
+    color:var(--text);
+    max-width:62ch;
+    margin-bottom:14px;
+  }
+  .article-link{
+    font-size:0.92rem;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .article-card:hover .article-link{ color:var(--brass); }
+
+  .empty-note{
+    color:#6b6555;
+    font-size:0.95rem;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta-box{
+    max-width:1100px;
+    margin:0 auto;
+    padding:48px 32px 76px;
+    text-align:center;
+  }
+  .cta-box p{
+    font-weight:600;
+    font-size:1.1rem;
+    margin-bottom:18px;
+  }
+  .btn-primary{
+    display:inline-block;
+    background:var(--brass);
+    color:var(--ink);
+    text-decoration:none;
+    padding:14px 26px;
+    font-size:0.98rem;
+    font-weight:600;
+    border-radius:2px;
+  }
+  .btn-primary:hover{background:#e6cfa3;}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    padding:32px 0;
+  }
+  .footer-inner{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    font-size:0.85rem;
+    color:#6b6555;
+  }
+  .footer-row{ display:flex; flex-wrap:wrap; gap:6px 18px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand-text" href="/">Studio Legale Benenati</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#faq">FAQ</a>
+      <a class="current" href="/blog/">Blog</a>
+      <a href="/#contatti">Contatti</a>
+      <a class="header-call" href="tel:+393286033555">328 603 3555</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="intro">
+    <div class="wrap">
+      <div class="kicker">Blog dello Studio</div>
+      <h1>Diritto penale, spiegato con chiarezza.</h1>
+      <p>Ogni settimana un articolo per orientarsi tra termini, diritti e fasi del procedimento penale. Contenuti informativi e divulgativi: per una valutazione sul proprio caso, il passo giusto resta un confronto diretto con lo studio.</p>
+    </div>
+  </section>
+
+  <section class="articles">
+    <div class="wrap">
+      <div class="article-grid">
+
+        <a class="article-card" href="/blog/querela-termini-differenza-denuncia.html">
+          <div class="article-meta">
+            <span class="article-category">Diritto Penale</span>
+            <span class="article-date">Settembre 2026</span>
+          </div>
+          <h2>Querela: cos'è, quali sono i termini e come si differenzia dalla denuncia</h2>
+          <p>Cos'è la querela penale, il termine di 90 giorni per presentarla e le differenze con la denuncia: la guida dell'avvocato penalista di Alcamo.</p>
+          <span class="article-link">Leggi l'articolo &rarr;</span>
+        </a>
+
+        <!-- Nuovo articolo settimanale: aggiungere qui una .article-card, in cima, mantenendo la stessa struttura -->
+
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-box">
+    <p>Hai un dubbio su un argomento trattato nel blog?</p>
+    <a class="btn-primary" href="/#contatti">Contatta lo Studio</a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-row">
+      <span>Studio Legale Benenati — Avv. Gaspare Benenati</span>
+      <span>Via Manzoni 7, Alcamo (TP) · Foro di Trapani</span>
+    </div>
+    <div class="footer-row">
+      <span>© <span id="year"></span> Studio Legale Benenati. Tutti i diritti riservati.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
