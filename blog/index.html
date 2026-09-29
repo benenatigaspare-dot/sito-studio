@@ -107,16 +107,7 @@
   .nav-toggle-bar{ display:block; width:22px; height:2px; background:var(--on-ink); border-radius:1px; }
   @media(max-width:859px){
     header .wrap{ position:relative; }
-    .nav-collapsible{
-      display:none;
-      position:absolute;
-      top:100%; right:0; left:0;
-      flex-direction:column;
-      align-items:stretch;
-      background:var(--ink);
-      border-bottom:1px solid var(--line-on-ink);
-      padding:4px 32px 16px;
-    }
+    .nav-collapsible{ display:none; position:absolute; top:100%; right:0; left:0; flex-direction:column; align-items:stretch; background:var(--ink); border-bottom:1px solid var(--line-on-ink); padding:4px 32px 16px; }
     .nav-collapsible.open{ display:flex; }
     .nav-collapsible a{ margin-left:0; padding:14px 0; border-top:1px solid var(--line-on-ink); }
     .nav-toggle{ display:flex; }
@@ -136,29 +127,12 @@
     color:#c9a877;
     margin-bottom:18px;
   }
-  .intro h1{
-    font-size:clamp(2.1rem, 4.4vw, 3rem);
-    line-height:1.12;
-    max-width:18ch;
-    color:var(--on-ink);
-  }
-  .intro p{
-    margin-top:20px;
-    max-width:56ch;
-    font-size:1.08rem;
-    color:var(--on-ink-dim);
-  }
+  .intro h1{ font-size:clamp(2.1rem, 4.4vw, 3rem); line-height:1.12; max-width:18ch; color:var(--on-ink); }
+  .intro p{ margin-top:20px; max-width:56ch; font-size:1.08rem; color:var(--on-ink-dim); }
 
   /* ---------- Article list ---------- */
-  .articles{
-    background:var(--paper-2);
-    padding:56px 0 76px;
-  }
-  .article-grid{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:24px;
-  }
+  .articles{ background:var(--paper-2); padding:56px 0 76px; }
+  .article-grid{ display:grid; grid-template-columns:1fr; gap:24px; }
   .article-card{
     background:var(--paper);
     border:1px solid var(--line);
@@ -169,78 +143,25 @@
     transition:border-color .15s ease;
   }
   .article-card:hover{ border-color:var(--brass); }
-  .article-meta{
-    display:flex;
-    align-items:center;
-    gap:14px;
-    margin-bottom:14px;
-    font-size:0.82rem;
-  }
-  .article-category{
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-    font-weight:600;
-    color:var(--brass);
-  }
+  .article-meta{ display:flex; align-items:center; gap:14px; margin-bottom:14px; font-size:0.82rem; }
+  .article-category{ text-transform:uppercase; letter-spacing:1.5px; font-weight:600; color:var(--brass); }
   .article-date{ color:#6b6555; }
-  .article-card h2{
-    font-size:1.4rem;
-    line-height:1.25;
-    margin-bottom:10px;
-  }
-  .article-card p{
-    color:var(--text);
-    max-width:62ch;
-    margin-bottom:14px;
-  }
-  .article-link{
-    font-size:0.92rem;
-    font-weight:600;
-    color:var(--ink);
-  }
+  .article-card h2{ font-size:1.4rem; line-height:1.25; margin-bottom:10px; }
+  .article-card p{ color:var(--text); max-width:62ch; margin-bottom:14px; }
+  .article-link{ font-size:0.92rem; font-weight:600; color:var(--ink); }
   .article-card:hover .article-link{ color:var(--brass); }
 
-  .empty-note{
-    color:#6b6555;
-    font-size:0.95rem;
-  }
+  .empty-note{ color:#6b6555; font-size:0.95rem; }
 
   /* ---------- CTA ---------- */
-  .cta-box{
-    max-width:1100px;
-    margin:0 auto;
-    padding:48px 32px 76px;
-    text-align:center;
-  }
-  .cta-box p{
-    font-weight:600;
-    font-size:1.1rem;
-    margin-bottom:18px;
-  }
-  .btn-primary{
-    display:inline-block;
-    background:var(--brass);
-    color:var(--ink);
-    text-decoration:none;
-    padding:14px 26px;
-    font-size:0.98rem;
-    font-weight:600;
-    border-radius:2px;
-  }
+  .cta-box{ max-width:1100px; margin:0 auto; padding:48px 32px 76px; text-align:center; }
+  .cta-box p{ font-weight:600; font-size:1.1rem; margin-bottom:18px; }
+  .btn-primary{ display:inline-block; background:var(--brass); color:var(--ink); text-decoration:none; padding:14px 26px; font-size:0.98rem; font-weight:600; border-radius:2px; }
   .btn-primary:hover{background:#e6cfa3;}
 
   /* ---------- Footer ---------- */
-  footer{
-    border-top:1px solid var(--line);
-    padding:32px 0;
-  }
-  .footer-inner{
-    display:flex;
-    flex-direction:column;
-    gap:8px;
-    font-size:0.85rem;
-    color:#6b6555;
-  }
+  footer{ border-top:1px solid var(--line); padding:32px 0; }
+  .footer-inner{ display:flex; flex-direction:column; gap:8px; font-size:0.85rem; color:#6b6555; }
   .footer-row{ display:flex; flex-wrap:wrap; gap:6px 18px; }
 </style>
 </head>
@@ -281,6 +202,25 @@
       <div class="article-grid">
 
         <!-- Nuovo articolo settimanale: aggiungere qui una .article-card, in cima, mantenendo la stessa struttura -->
+        <a class="article-card" href="/blog/intelligenza-artificiale-437bis.html">
+          <div class="article-meta">
+            <span class="article-category">Diritto Penale</span>
+            <span class="article-date">Settembre 2026</span>
+          </div>
+          <h2>Intelligenza artificiale ad alto rischio: cosa prevede il nuovo reato in vigore dal 30 settembre 2026</h2>
+          <p>Il D.Lgs. 160/2026 introduce l'art. 437-bis c.p.: pene fino a 8 anni per chi omette sicurezza e sorveglianza umana sui sistemi di IA ad alto rischio, con sanzioni anche per le aziende.</p>
+          <span class="article-link">Leggi l'articolo &rarr;</span>
+        </a>
+
+        <a class="article-card" href="/blog/deepfake-612quater.html">
+          <div class="article-meta">
+            <span class="article-category">Diritto Penale</span>
+            <span class="article-date">Settembre 2026</span>
+          </div>
+          <h2>Deepfake: cosa prevede l'art. 612-quater del codice penale</h2>
+          <p>La diffusione di immagini, video, voci o suoni falsi creati con l'intelligenza artificiale è reato: pene, aggravanti e quando si procede d'ufficio.</p>
+          <span class="article-link">Leggi l'articolo &rarr;</span>
+        </a>
 
         <a class="article-card" href="/blog/stalking-email-cassazione.html">
           <div class="article-meta">
