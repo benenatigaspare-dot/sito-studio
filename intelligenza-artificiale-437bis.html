@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intelligenza artificiale ad alto rischio: da settembre 2026 alcune condotte diventano reato | Studio Legale Benenati</title>
+<meta name="description" content="Il D.Lgs. 160/2026 introduce l'art. 437-bis c.p.: pene fino a 8 anni per chi omette sicurezza e sorveglianza umana sui sistemi di IA ad alto rischio. Spiega l'Avv. Gaspare Benenati.">
+<meta name="theme-color" content="#1b2130">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,500;0,8..30,600;1,8..30,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --ink: #1b2130;
+    --paper: #ffffff;
+    --paper-2: #f3f1ec;
+    --text: #211e19;
+    --on-ink: #eeeae1;
+    --on-ink-dim: #a9aebb;
+    --brass: #8a6a3f;
+    --line: #c9c0ad;
+    --line-on-ink: #3a4053;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  :focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+  body {
+    background: var(--paper);
+    color: var(--text);
+    font-family: 'Public Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .serif { font-family: 'Piazzolla', serif; font-weight: 500; letter-spacing: -0.01em; }
+  a { color: inherit; }
+
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--ink);
+    border-bottom: 1px solid var(--line-on-ink);
+  }
+  header .wrap {
+    max-width: 1100px; margin: 0 auto; padding: 14px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand-text { font-family: 'Piazzolla', serif; font-size: 1.05rem; color: var(--on-ink); font-weight: 500; text-decoration: none; }
+  header nav a { text-decoration: none; font-size: 0.95rem; color: var(--on-ink-dim); margin-left: 28px; }
+  header nav a:hover { color: var(--on-ink); }
+  .header-call { display: none; }
+  @media(min-width:640px){
+    .header-call{
+      display:inline-block; margin-left:28px; padding:8px 16px;
+      border:1px solid var(--brass); border-radius:2px;
+      text-decoration:none; font-size:0.92rem; color:var(--on-ink) !important;
+    }
+    .header-call:hover{ background:var(--brass); color:var(--ink) !important; }
+  }
+  header nav{ display:flex; align-items:center; }
+  .nav-collapsible{ display:flex; align-items:center; }
+  .nav-blog{ margin-left:28px; }
+  .nav-toggle{
+    display:none;
+    background:none; border:none; cursor:pointer;
+    padding:6px; margin-left:20px;
+    flex-direction:column; justify-content:center; gap:5px;
+  }
+  .nav-toggle-bar{ display:block; width:22px; height:2px; background:var(--on-ink); border-radius:1px; }
+  @media(max-width:859px){
+    header .wrap{ position:relative; }
+    .nav-collapsible{
+      display:none;
+      position:absolute;
+      top:100%; right:0; left:0;
+      flex-direction:column;
+      align-items:stretch;
+      background:var(--ink);
+      border-bottom:1px solid var(--line-on-ink);
+      padding:4px 32px 16px;
+    }
+    .nav-collapsible.open{ display:flex; }
+    .nav-collapsible a{ margin-left:0; padding:14px 0; border-top:1px solid var(--line-on-ink); }
+    .nav-toggle{ display:flex; }
+  }
+
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+  }
+
+  .eyebrow {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--brass);
+  }
+  .eyebrow-line {
+    width: 50px;
+    height: 3px;
+    background: var(--brass);
+    margin: 12px 0 24px;
+  }
+  h1 {
+    font-size: clamp(1.9rem, 4vw, 2.6rem);
+    line-height: 1.18;
+    margin: 0 0 14px;
+  }
+  .source-line {
+    font-size: 15px;
+    color: var(--on-ink-dim);
+    color: #6b6555;
+    margin-bottom: 40px;
+  }
+  article h2 {
+    font-size: 1.35rem;
+    margin-top: 40px;
+    margin-bottom: 12px;
+  }
+  article p {
+    font-size: 17px;
+    color: var(--text);
+    margin: 0 0 18px;
+  }
+  .cta-box {
+    margin-top: 48px;
+    padding: 32px;
+    background: var(--paper-2);
+    border: 1px solid var(--line);
+    text-align: center;
+  }
+  .cta-box p { margin: 0 0 16px; font-weight: 600; }
+  .cta-box a {
+    display: inline-block;
+    background: var(--brass);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 2px;
+    font-size: 0.95rem;
+  }
+  .cta-box a:hover { background: #e6cfa3; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 32px 0;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto; padding: 0 32px;
+    display: flex; flex-direction: column; gap: 8px;
+    font-size: 0.85rem; color: #6b6555;
+  }
+  .footer-row { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand-text" href="/">Studio Legale Benenati</a>
+    <nav>
+      <div class="nav-collapsible" id="navCollapsible">
+        <a href="/">Home</a>
+        <a href="/#faq">FAQ</a>
+        <a href="/#contatti">Contatti</a>
+      </div>
+      <a class="nav-blog" href="/blog/">Blog</a>
+      <a class="header-call" href="tel:+393286033555">328 603 3555</a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navCollapsible" aria-label="Apri menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="eyebrow">INTELLIGENZA ARTIFICIALE E DIRITTO PENALE</div>
+  <div class="eyebrow-line"></div>
+
+  <h1>Intelligenza artificiale ad alto rischio: cosa prevede il nuovo reato in vigore dal 30 settembre 2026</h1>
+  <div class="source-line">Art. 437-bis c.p., introdotto dal D.Lgs. 9 settembre 2026, n. 160</div>
+
+  <article>
+    <p>Dal 30 settembre 2026 il codice penale italiano contiene, per la prima volta, un reato pensato specificamente per l'intelligenza artificiale. Non riguarda chi usa un chatbot per scrivere una mail o chi si affida a un assistente virtuale nella vita di tutti i giorni, ma chi progetta, gestisce o mette sul mercato sistemi di IA considerati "ad alto rischio": dalla diagnostica medica ai trasporti, dalla sicurezza sul lavoro alle infrastrutture critiche.</p>
+
+    <h2>Cosa prevede la nuova norma</h2>
+    <p>Il Decreto Legislativo 9 settembre 2026, n. 160, pubblicato in attuazione del Regolamento europeo sull'intelligenza artificiale (il cosiddetto AI Act), introduce nel codice penale il nuovo articolo 437-bis. La norma punisce chi, occupandosi di un sistema di intelligenza artificiale classificato "ad alto rischio", omette le misure tecniche di sicurezza previste dalla legge oppure la necessaria sorveglianza umana, quando da questa omissione derivi un pericolo concreto per la vita o per l'incolumità pubblica o individuale. È punita anche l'alterazione dolosa di un sistema di IA ad alto rischio, quando comporti lo stesso tipo di pericolo.</p>
+
+    <h2>Le pene previste</h2>
+    <p>Le pene variano in base alla gravità della condotta e del pericolo creato. Per l'omissione di misure di sicurezza o di sorveglianza umana che mette in pericolo la vita o l'incolumità delle persone è prevista la reclusione da uno a cinque anni, che sale da due a otto anni se il pericolo riguarda la sicurezza dello Stato. Per l'alterazione dolosa di un sistema ad alto rischio la pena va da due a sei anni, elevabile fino a dieci anni negli stessi casi più gravi. Se il fatto è commesso per colpa grave, la pena è ridotta.</p>
+
+    <h2>A chi si applica</h2>
+    <p>La norma non riguarda l'uso comune dell'intelligenza artificiale, ma si rivolge a chi sviluppa, distribuisce o utilizza professionalmente sistemi di IA classificati "ad alto rischio" secondo la normativa europea: si pensi, per fare alcuni esempi, ai software impiegati in ambito sanitario, nei trasporti, nella selezione del personale o nella gestione di infrastrutture essenziali. Il pericolo per la vita o l'incolumità delle persone resta l'elemento che fa scattare la responsabilità penale: non basta una qualunque violazione delle regole tecniche previste dall'AI Act.</p>
+
+    <h2>La responsabilità delle aziende</h2>
+    <p>Il decreto interviene anche sulla responsabilità degli enti, introducendo il nuovo articolo 25-vicies del d.lgs. 231/2001: le aziende che, attraverso i propri vertici o dipendenti, commettono uno dei nuovi reati rischiano sanzioni pecuniarie da 600 a 1.000 quote, oltre alle conseguenze penali per le persone fisiche coinvolte.</p>
+
+    <h2>Perché è una novità importante</h2>
+    <p>Anche se la norma si rivolge in primo luogo a imprese e professionisti del settore, segna un passaggio significativo: l'intelligenza artificiale entra a pieno titolo tra le materie regolate dal diritto penale, con regole pensate per bilanciare innovazione e tutela della sicurezza delle persone. Una materia destinata, nei prossimi anni, a intrecciarsi sempre più spesso con la vita quotidiana di cittadini e imprese.</p>
+  </article>
+
+  <div class="cta-box">
+    <p>Hai un dubbio su questo argomento? Parliamone.</p>
+    <a href="/#contatti">Contatta lo Studio</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-row">
+      <span>Studio Legale Benenati — Avv. Gaspare Benenati</span>
+      <span>Via Manzoni 7, Alcamo (TP) · Foro di Trapani</span>
+    </div>
+    <div class="footer-row">
+      <span>studiolegalebenenati@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  (function(){
+    var navToggle = document.getElementById('navToggle');
+    var navCollapsible = document.getElementById('navCollapsible');
+    if (!navToggle || !navCollapsible) return;
+    navToggle.addEventListener('click', function(){
+      var isOpen = navCollapsible.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    navCollapsible.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        navCollapsible.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
